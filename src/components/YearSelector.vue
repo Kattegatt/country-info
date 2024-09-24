@@ -1,15 +1,19 @@
 <template>
   <div class="year-selector">
-    <div class="btn-group">
-      <button
-        v-for="year in years"
-        :key="year"
-        @click="changeYear(year)"
-        class="btn btn-outline-primary me-2"
-        :class="{ active: year === selectedYear }"
-      >
-        {{ year }}
-      </button>
+    <div class="container">
+      <div class="row">
+        <div class="btn-group">
+          <button
+            v-for="year in years"
+            :key="year"
+            @click="changeYear(year)"
+            class="btn btn-outline-dark me-2"
+            :class="{ active: year === selectedYear }"
+          >
+            {{ year }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -45,8 +49,9 @@ const changeYear = (year) => {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
+  border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 </style>

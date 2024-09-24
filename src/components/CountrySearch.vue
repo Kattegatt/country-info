@@ -62,7 +62,8 @@ const filterCountries = () => {
 }
 
 .router-link-container:hover {
-  background-color: antiquewhite;
+  background-color: rgb(24, 23, 22);
+  color: aliceblue;
   transition: linear 0.2s all;
 }
 

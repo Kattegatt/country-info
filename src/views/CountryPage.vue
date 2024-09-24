@@ -1,8 +1,13 @@
 <template>
   <div class="container mt-4">
-    <div class="row-cols-1">
-      <button @click="routeHome"><-</button>
-      <h1>{{ countryName }}</h1>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-outline-dark" @click="routeHome">
+          <span class="material-symbols-outlined">&laquo;</span>
+          Back
+        </button>
+        <h1>{{ countryName }}</h1>
+      </div>
     </div>
     <HolidayList :holidays="holidays" :loading="loading" />
     <YearSelector :selectedYear="selectedYear" @year-changed="changeYear" />
@@ -63,3 +68,13 @@ watchEffect(() => {
   }
 })
 </script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+</style>
