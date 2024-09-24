@@ -1,12 +1,11 @@
 <template>
   <div class="container mt-4">
-    <div class="row">
-      <div class="col">
-        <button class="btn btn-outline-dark" @click="routeHome">
+    <div class="row d-flex align-items-center">
+      <div class="col d-flex align-items-center mb-3">
+        <button class="btn btn-outline-dark me-3" @click="routeHome">
           <span class="material-symbols-outlined">&laquo;</span>
-          Back
         </button>
-        <h1>{{ countryName }}</h1>
+        <h1 class="mb-0">{{ countryName }}</h1>
       </div>
     </div>
     <HolidayList :holidays="holidays" :loading="loading" />
@@ -69,12 +68,21 @@ watchEffect(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .material-symbols-outlined {
   font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
     'opsz' 24;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0;
 }
 </style>

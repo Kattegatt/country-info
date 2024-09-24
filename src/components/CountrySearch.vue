@@ -2,7 +2,6 @@
   <div class="mb-3">
     <input
       v-model="searchQuery"
-      @input="filterCountries"
       type="text"
       class="form-control mb-3"
       placeholder="Search for a country"
@@ -43,10 +42,6 @@ const filteredCountries = computed(() => {
     country.name.toLowerCase().includes(searchQuery.value.toLowerCase())
   )
 })
-
-const filterCountries = () => {
-  // This function can be used to implement debounce if needed
-}
 </script>
 
 <style scoped>

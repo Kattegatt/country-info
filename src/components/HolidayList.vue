@@ -12,8 +12,8 @@
             {{ holiday.localName }} ({{ holiday.name }})
           </h5>
           <h5 v-else>{{ holiday.name }}</h5>
-          <p>Date: {{ holiday.date }}</p>
-          <p>Type: {{ holiday.types.join(', ') }}</p>
+          <p class="m-0">Date: {{ holiday.date }}</p>
+          <p class="m-0">Type: {{ holiday.types.join(', ') }}</p>
         </div>
       </div>
     </ul>
