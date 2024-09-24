@@ -1,4 +1,3 @@
-<!-- src/components/YearSelector.vue -->
 <template>
   <div class="year-selector">
     <div class="btn-group">

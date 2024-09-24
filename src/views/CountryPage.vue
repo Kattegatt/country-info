@@ -1,4 +1,3 @@
-<!-- src/views/CountryPage.vue -->
 <template>
   <div class="container mt-4">
     <div class="row-cols-1">
