@@ -33,13 +33,17 @@ cd country-info-app
 
 Install dependencies:
 
-`Copy npm install`
+```
+Copy npm install
+```
 
 ### Running the Application
 
 To start the development server:
 
-`npm run dev`
+```
+npm run dev
+```
 
 The application will be available at http://localhost:5173.
 
