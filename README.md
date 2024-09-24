@@ -28,7 +28,7 @@ Clone the repository:
 
 ```
 git clone https://github.com/Kattegatt/country-info.git
-cd country-info-app
+cd country-info
 ```
 
 Install dependencies:
