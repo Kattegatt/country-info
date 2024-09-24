@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div class="card-header">Random Countries Widget</div>
-    <div class="card-body">
+    <div class="card-header">Explore random holidays</div>
+    <div v-if="!loading" class="card-body">
       <div
         v-for="country in randomCountries"
         :key="country.countryCode"
@@ -16,6 +16,11 @@
         <p class="card-text" v-else>No upcoming holidays found</p>
       </div>
     </div>
+    <div v-else class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,7 +30,7 @@ import { useCountries } from '../composables/useCountries'
 import { useHolidays } from '../composables/useHolidays'
 
 const { countries, fetchCountries } = useCountries()
-const { fetchNextHoliday } = useHolidays()
+const { fetchNextHoliday, loading } = useHolidays()
 
 const randomCountries = ref([])
 
