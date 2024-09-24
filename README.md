@@ -34,7 +34,7 @@ cd country-info-app
 Install dependencies:
 
 ```
-Copy npm install
+npm install
 ```
 
 ### Running the Application
