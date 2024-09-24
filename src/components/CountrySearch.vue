@@ -1,3 +1,4 @@
+<!-- src/components/CountrySearch.vue -->
 <template>
   <div class="mb-3">
     <input
@@ -7,7 +8,7 @@
       class="form-control mb-3"
       placeholder="Search for a country"
     />
-    <ul class="list-group mt-2">
+    <div class="country-list-container">
       <div
         v-for="country in filteredCountries"
         :key="country.countryCode"
@@ -24,7 +25,7 @@
       >
         <div class="card-body">{{ country.name }}</div>
       </div>
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -49,10 +50,12 @@ const filterCountries = () => {
 }
 </script>
 
-<style>
-.router-link {
-  color: #000;
-  text-decoration: none;
+<style scoped>
+.country-list-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  border: none #dee2e6;
+  padding-right: 4px;
 }
 
 .router-link-container {
@@ -62,5 +65,23 @@ const filterCountries = () => {
 .router-link-container:hover {
   background-color: antiquewhite;
   transition: linear 0.2s all;
+}
+
+/* Custom scrollbar styles for webkit browsers */
+.country-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.country-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.country-list-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.country-list-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>
